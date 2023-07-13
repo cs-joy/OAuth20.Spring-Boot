@@ -1,0 +1,21 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: ${gi_cid}
+            clientSecret: ${gi_cs}
+          google:
+            clientId: ${g_cid}
+            clientSecret: ${g_cs}
+          discord:
+            clientId: ${d_cid}
+            clientSecret: ${d_cs}
+            redirectUri: ${baseUrl}/login/oauth2/code/discord
+            scope:
+              - identify email
+
+
+server:
+  port: 1120
